@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/models/stable-diffusion-v1-4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/models/stable-diffusion-v1-5" vcs="Git" />
   </component>
 </project>

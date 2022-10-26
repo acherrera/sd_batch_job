@@ -2,6 +2,7 @@
 Main file that runs the stable diffusion pipeline
 Initial implementation comes from here: https://huggingface.co/blog/stable_diffusion
 """
+import os
 
 from diffusers import StableDiffusionPipeline
 
@@ -33,9 +34,8 @@ def main():
     :return:
     """
 
-    #TODO get token
-
-    pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", use_auth_token=TOKEN)
+    TOKEN = os.environ["TOKEN"]
+    pipe = StableDiffusionPipeline.from_pretrained("./models/")
     pipe.to("cuda")
 
     prompt = "a photograph of an astronaut riding a horse"
@@ -44,5 +44,6 @@ def main():
 
     image.save(f"astronaut_rides_horse.png")
 
+
 if __name__ == "__main__":
-    print("Hello")
+    main()
