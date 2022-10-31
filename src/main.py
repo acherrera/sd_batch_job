@@ -33,8 +33,7 @@ def main():
     :return:
     """
 
-    #TODO get token
-
+    #TODO use local image, don't download every time
     pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", use_auth_token=TOKEN)
     pipe.to("cuda")
 
